@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-canvas: #F6F5F0;
+  --bg-subtle: #F1EFE8;
+  --bg-card: #ECEAE2;
+  --bg-hover: #E4E1D7;
+  --bg-hover-alt: #E2DFD5;
+  --bg-divider: #D6D3C8;
+
+  --ink-primary: #2D312B;
+  --ink-hover: #3D4239;
+  --ink-secondary: #454A42;
+  --ink-muted: #5F6459;
+  --ink-sage: #3E4538;
+  --ink-sage-strong: #4F6340;
+  --ink-optimal: #45573A;
+
+  --sage-soft: #DCE3D2;
+  --sage-light: #CBD3BF;
+  --sage-well: #C9D3BB;
+  --sage-water: #C7D0B9;
+  --sage-primary: #B5C2A3;
+  --sage-hover: #A7B693;
+  --sage-mid: #99AA84;
+  --sage-line: #7E8F6A;
+  --sage-deep: #6F7A63;
+
+  --sand-fat: #D6CDB8;
+  --status-border-bar: #E9DCC3;
+  --status-border-bg: #F1E4C6;
+  --status-border-dot: #D9B66E;
+  --status-border-fg: #7D5A1C;
+
+  --status-out-bar: #E9CFC2;
+  --status-out-bg: #EED6CB;
+  --status-out-dot: #C98468;
+  --status-out-fg: #8E4430;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    background-color: var(--bg-canvas);
+    color: var(--ink-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a {
+    color: var(--ink-sage-strong);
+  }
+
+  a:hover {
+    color: var(--ink-primary);
+  }
+
+  input:focus,
+  button:focus-visible {
+    outline: 2px solid var(--sage-mid);
+    outline-offset: 2px;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
